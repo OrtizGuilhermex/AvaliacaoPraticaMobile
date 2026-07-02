@@ -18,8 +18,8 @@ class RelatorioActivity : AppCompatActivity() {
         txtRelatorio = findViewById(R.id.txtRelatorio)
         btnVoltar = findViewById(R.id.btnVoltar)
 
-        val operador = intent.getStringExtra("operador")
-        val linha = intent.getStringExtra("linha")
+        val operador = intent.getStringExtra("operador")?.uppercase() ?: ""
+        val linha = intent.getStringExtra("linha")?.uppercase() ?: ""
         val pecas = intent.getIntExtra("pecas",0)
         val tempoTotal = intent.getLongExtra("tempoTotal",0)
         val tempoMedio = intent.getDoubleExtra("tempoMedio",0.0)
